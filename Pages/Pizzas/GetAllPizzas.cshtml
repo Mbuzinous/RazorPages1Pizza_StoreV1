@@ -1,0 +1,17 @@
+﻿@page
+@using Pizza_StoreV1.Models
+@model Pizza_StoreV1.GetAllPizzasModel
+
+@{
+    ViewData["Title"] = "GetAllPizzas";
+}
+<h1>GetAllPizzas</h1>
+
+@*Betyder vi kan skrive c# code her*@
+@{
+    foreach (Pizza pizza in Model.Pizzas.Values)
+    {
+        <li>Menu Nr: @pizza.Id __________ @pizza.Name __________ @pizza.Description __________ Price: @pizza.Price Kr __________ <img src="/Images/@pizza.ImageName" /></li>
+    }
+}
+
